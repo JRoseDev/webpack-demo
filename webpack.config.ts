@@ -3,8 +3,8 @@ const path = require("path");
 import webpack from "webpack";
 
 const config: webpack.Configuration = {
-    mode: "development",
-    devtool: "eval-source-map",
+    mode: "production",
+    devtool: false,
 
     entry: "./src/index.js",
 
