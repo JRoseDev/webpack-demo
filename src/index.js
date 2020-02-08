@@ -1,7 +1,9 @@
+import { addFingers } from "./fingers";
+
 const message = "I came from javascript";
 
 const messageElement = document.createElement("h1");
-messageElement.textContent = message;
+messageElement.textContent = addFingers(message);
 
 const body = document.getElementsByTagName("body")[0];
 
