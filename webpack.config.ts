@@ -12,6 +12,19 @@ const config: webpack.Configuration = {
         path: path.resolve("dist"),
         publicPath: "dist/",
         filename: "bundle.js"
+    },
+
+    module: {
+        rules: [
+            {
+                test: /\.jpg$/u,
+                use: [
+                    {
+                        loader: "file-loader"
+                    }
+                ]
+            }
+        ]
     }
 };
 

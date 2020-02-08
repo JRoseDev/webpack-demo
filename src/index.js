@@ -1,3 +1,6 @@
+import { appendImage } from "./append-image";
+import loaderImage from "./images/loaders.jpg";
+
 const message = "I came from javascript";
 
 const messageElement = document.createElement("h1");
@@ -14,3 +17,5 @@ setTimeout(() => {
         )}`;
     });
 }, 3000);
+
+appendImage(document, loaderImage);
