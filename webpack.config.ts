@@ -14,6 +14,24 @@ const config: webpack.Configuration = {
         filename: "bundle.js"
     },
 
+    optimization: {
+        splitChunks: {
+            chunks: "all",
+            cacheGroups: {
+                defaultVendors: {
+                    name: "vendors",
+                    test: /[\\/]node_modules[\\/]/,
+                    priority: -10
+                }
+                // default: {
+                //     minChunks: 2,
+                //     priority: -20,
+                //     reuseExistingChunk: true
+                // }
+            }
+        }
+    },
+
     module: {
         rules: [
             {
