@@ -23,6 +23,20 @@ const config: webpack.Configuration = {
                         loader: "file-loader"
                     }
                 ]
+            },
+            {
+                test: /\.less$/u,
+                use: [
+                    {
+                        loader: "style-loader"
+                    },
+                    {
+                        loader: "css-loader"
+                    },
+                    {
+                        loader: "less-loader"
+                    }
+                ]
             }
         ]
     }
