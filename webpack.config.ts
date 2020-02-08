@@ -17,6 +17,15 @@ const config: webpack.Configuration = {
     module: {
         rules: [
             {
+                test: /\.js$/u,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: "babel-loader"
+                    }
+                ]
+            },
+            {
                 test: /\.jpg$/u,
                 use: [
                     {
