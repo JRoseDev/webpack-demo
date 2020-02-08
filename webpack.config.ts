@@ -1,8 +1,10 @@
 const path = require("path");
 
-module.exports = {
+import webpack from "webpack";
+
+const config: webpack.Configuration = {
     mode: "development",
-    devtool: "none",
+    devtool: false,
 
     entry: "./src/index.js",
 
@@ -12,3 +14,5 @@ module.exports = {
         filename: "bundle.js"
     }
 };
+
+export default config;
