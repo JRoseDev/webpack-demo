@@ -14,6 +14,10 @@ const config: webpack.Configuration = {
         filename: "bundle.js"
     },
 
+    resolve: {
+        extensions: [".js", ".ts"]
+    },
+
     optimization: {
         splitChunks: {
             chunks: "all",
@@ -62,6 +66,18 @@ const config: webpack.Configuration = {
                     },
                     {
                         loader: "less-loader"
+                    }
+                ]
+            },
+            {
+                test: /\.ts$/u,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: "babel-loader"
+                    },
+                    {
+                        loader: "ts-loader"
                     }
                 ]
             }
