@@ -4,7 +4,7 @@ import webpack from "webpack";
 
 const config: webpack.Configuration = {
     mode: "development",
-    devtool: false,
+    devtool: "eval-source-map",
 
     entry: "./src/index.js",
 
