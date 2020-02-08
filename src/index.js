@@ -1,4 +1,5 @@
 import "./styles.less";
+import "core-js";
 
 import { appendImage } from "./append-image";
 import loaderImage from "./images/loaders.jpg";
